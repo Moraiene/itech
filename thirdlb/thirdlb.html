@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+
+    <body>
+    <div class="Form">
+        <form name="picForm">
+            <label for="picHolder">Select picture: </label>
+            <label>
+                <select name="picSelect">
+                    <option value="" disabled selected style="display:none;">Label</option>
+                    <option value="src/cup1.jpg">picture1</option>
+                    <option value="src/cup2.jpg">picture2</option>
+                    <option value="src/cup3.jpg">picture3</option>
+                </select>
+            </label>
+            <label for="myNumber">Change size: px</label>
+            <input id="myNumber" type="number" value="400" min="100" max="800" step="50">
+        </form>
+        <img id="picHolder" src="src/download.jpg" alt="cup4">
+    </div>
+
+    <script>
+        picForm.picSelect.onchange= function(){
+            picHolder.src = this.value;
+        };
+
+        myNumber.onchange = function(){
+            picHolder.style.width = this.value +"px";
+            picHolder.style.height = this.value +"px";
+        };
+
+    </script>
+    </body>
+    </html>
