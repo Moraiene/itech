@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: left;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.button {
+    background: #6292c2;
+    position: relative;
+    bottom: -15px;
+    margin:5px;
+    animation: bounce 0.9s infinite;
+}
+
+@keyframes bounce {
+    0% { bottom: 0; }
+    100% { bottom: -15px; }
+}
+
+.layer {
+    float: right;
+    background: #fd0;
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 20px;
+    width: 40%;
+}
